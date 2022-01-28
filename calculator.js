@@ -12,33 +12,35 @@
  *
  *  */
 const calculator = (operand1, operand2, operator) => {
-  if (parseInt(operand1 !== true && operand2 !== true)) {
-    return "please enter correct value";
-  }
-  if (
-    operator === "+" ||
-    operator === "-" ||
-    operator === "*" ||
-    operator === "/"
-  ) {
-    var result;
-    if (operator == "+") {
-      result = operand1 + operand2;
-      return result;
+  var num1 = parseInt(operand1);
+  var num2 = parseInt(operand2);
+  if (num1 && num2) {
+    if (
+      operator === "+" ||
+      operator === "-" ||
+      operator === "*" ||
+      operator === "/"
+    ) {
+      var result;
+      if (operator == "+") {
+        result = operand1 + operand2;
+        return result;
+      }
+      if (operator == "-") {
+        result = operand1 - operand2;
+        return result;
+      }
+      if (operator == "*") {
+        result = operand1 * operand2;
+        return result;
+      }
+      if (operator == "/") {
+        result = operand1 / operand2;
+        return result;
+      }
     }
-    if (operator == "-") {
-      result = operand1 - operand2;
-      return result;
-    }
-    if (operator == "*") {
-      result = operand1 * operand2;
-      return result;
-    }
-    if (operator == "/") {
-      result = operand1 / operand2;
-      return result;
-    }
+    return "Please Enter correct value";
   }
   return "Please Enter correct value";
 };
-console.log(calculator(6, 5, "-"));
+console.log(calculator("hh5", "5", "+"));
